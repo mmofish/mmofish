@@ -1,9 +1,9 @@
 # mmofish gemfile -- DO NOT MODIFY without speaking to Mizpah!
 source 'https://rubygems.org'
 
-# We have chose to use a pessamistic versioning constraint during development,
-# Thus ~3.2 will allow all version to update between 3.2.0 & 3.9.9, but will not
-# allow 4.0.0 to load.  This may be reviewed for production.
+# We have chose to use a pessamistic versioning constraint (~>2.1) during development
+# in some cases, amd latest versions (optimistic constraint) (=>2.1) in others.
+# This iwll be reviewed for production
 
 gem 'rails', '~>3.2'
 
@@ -12,9 +12,12 @@ gem 'rails', '~>3.2'
 
 # Below gem's are used in all enviroments:
 
-gem 'bootstrap-sass', '~2.1'
+# Example 'Pessamistic Constraint': Thus ~>2.1 will allow all version to update between 2.1.0 & 2.9.9, but will not
+# allow 3.0.0 to load. 
+
+gem 'bootstrap-sass', '~>2.1'
 gem 'bcrypt-ruby', '~>3.0'
-gem 'fakr', '~>1.0.'
+gem 'faker', '~>1.0'
 gem 'kaminari'
 gem 'jquery-rails', '~>2.0'
  
@@ -33,9 +36,9 @@ end
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
-  gem 'sass-rails',   '~> 3.2'
-  gem 'coffee-rails', '~> 3.2'
-  gem 'uglifier', '>= 1.0'
+  gem 'sass-rails',   '>=3.2'
+  gem 'coffee-rails', '>=3.2'
+  gem 'uglifier', '>=1.0'
 end
 
 
@@ -46,7 +49,7 @@ group :test do
   gem 'factory_girl_rails', '~>4.1'
   # Install cucumber gem, but only invoke on demand from shell
   gem 'cucumber-rails', '~>1.2', :require => false
-  gem 'database_cleaner', '0.7.0'
+  gem 'database_cleaner', '~>0.7'
   # Occasionaly loaded for testing:
   # gem 'launchy', '2.1.0'
   # gem 'rb-fsevent', '0.9.1', :require => false
