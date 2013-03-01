@@ -2,6 +2,7 @@ require 'spec_helper'
 
 describe "Static pages" do
 
+
   describe "Home page" do
     
     it "should have the h1 'mmofish'" do
@@ -22,8 +23,7 @@ describe "Static pages" do
     end
   end
  
-  
-  
+   
   describe "About page" do
       
     it "should have the h1 'About Us'" do
@@ -37,6 +37,7 @@ describe "Static pages" do
       :text => "Swimming with mmofish | About Us")
    end
 end
+
 
   describe "Contact page" do
         
