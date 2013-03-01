@@ -1,4 +1,24 @@
+/* Twitter bootsrap, less > scss $vars overides
+ * --------------
+ * Takes an existing bootstrap value and redefines it
+ * Must be used BEFORE the import
+ * Once asset pipline is compiled, must be refreshed on server
+ * Will apply to all usages within the core bootstrap enviroment
+ */
+
+$myOrange: #f89406;
+$orange: $myOrange;
+
 @import "bootstrap";
+
+/* New scss $vars
+ * --------------
+ * Will apply to all references in this file
+ *
+ */
+
+$grayMid:#666;
+
 
 /* UNIVERSAL */
 
@@ -18,12 +38,12 @@ textarea {
   resize:vertical;
 }
 
+/*scss inheritance in action!*/
 .center {
   text-align:center;
-}
-
-.center h1 {
-  margin-bottom:10px;
+  h1 {
+    margin-bottom:10px;
+  }
 }
 
 /* typography */
@@ -37,7 +57,7 @@ h1 {
   letter-spacing:-2px;
   margin-bottom:30px;
   text-align:center;
-  color:#999;
+  color:$grayLight;
 }
 
 p {
@@ -49,45 +69,39 @@ p {
   float:left;
   margin-right:10px;
   font-size:1.7em;
-  color:#666;
+  color:$orange;
   text-transform:uppercase;
-  padding-top: 9px;
-  font-weight: bold;
-  line-height: 1;
-}
-
-#logo:hover {
-  color:#666;
-  text-decoration:none;
+  padding-top:9px;
+  font-weight:bold;
+  line-height:1;
+  &:hover {
+    color:$orange;
+    text-decoration:none;
+  }
 }
 
 /* FOOTER */
 
 footer {
-  margin-top:45px;
+  margin-top: 45px;
   padding-top: 5px;
-  border-top:1px solid #eaeaea;
-  color: #999 
-}
-
-footer a {
-  color: #555  
-}
-
-footer a:hover {
-  color: #222  
-}
-
-footer small {
-  float:left;
-}
-
-footer ul {
-  float:right;
-  list-style:none;  
-}  
-
-footer ul li {
-  float: left;
-  margin-left:10px;  
-}
+  border-top: 1px solid #eaeaea;
+  color: $grayLight;
+  a {
+    color: #555;
+    &:hover {
+      color: #222; 
+    }
+  }
+  small {
+    float:left;
+  }
+  ul {
+    float:right;
+    list-style:none;
+    li {
+        float: left;
+        margin-left:10px; 
+    }
+  }      
+}   
