@@ -2,8 +2,9 @@
  * --------------
  * Takes an existing bootstrap value and redefines it
  * Must be used BEFORE the import
- * Once asset pipline is compiled, must be refreshed on server
- * Will apply to all usages within the core bootstrap enviroment
+ * Once asset pipeline is compiled, must be refreshed on server
+
+ * Will apply to all usages within the core bootstrap environment
  */
 
 $myOrange: #f89406;
