@@ -81,6 +81,55 @@ p {
   }
 }
 
+
+/* LAUNCH PAGE */
+
+header.navbar {
+  background-color:#000;
+}
+
+.midnav > li { 
+text-align:center; 
+  display:inline-block; 
+    /* IE hasLayout hack */ 
+    zoom:1; 
+    *display:inline; 
+} 
+
+/* Git Stats */
+
+.gitstats {
+  .intro {
+    
+  }
+  .commit {
+    font-size: 80px;
+    line-height: 80px;
+    font-weight: bold;
+  }
+  .gitdetail {
+    text-align:center;
+
+    p {
+        text-align:center;
+        }
+    small {
+      float:right;
+      padding-right:10px;    
+    }  
+  }
+}
+
+
+.midnav > li > a {
+   color: #777777;
+    float: none;
+    padding: 10px 15px;
+    text-decoration: none;
+    text-shadow: 0 1px 0 white
+}
+
+
 /* FOOTER */
 
 footer {
@@ -95,14 +144,6 @@ footer {
     }
   }
   small {
-    float:left;
+    text-align:center;
   }
-  ul {
-    float:right;
-    list-style:none;
-    li {
-        float: left;
-        margin-left:10px; 
-    }
-  }      
-}   
+ }
