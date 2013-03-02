@@ -11,6 +11,7 @@ $myOrange: #f89406;
 $orange: $myOrange;
 
 @import "bootstrap";
+@import url(http://fonts.googleapis.com/css?family=Nova+Square); /*Test Font*/
 
 /* New scss $vars
  * --------------
@@ -19,12 +20,17 @@ $orange: $myOrange;
  */
 
 $grayMid:#666;
-
+$backgroundOrange:#f78b00;
+$backgroundGrey:#eeeeee;
+$textShadow:rgba(0,0,0,0.25); /*black with 25% opacity!*/
+$headingFont:'Nova Square', cursive;
+$font:#fef200;
 
 /* UNIVERSAL */
 
 html {
   overflow-y: scroll;
+  background-color: $backgroundGrey;
 }
 
 body {
@@ -61,6 +67,7 @@ h1 {
   color:$grayLight;
 }
 
+
 p {
   font-size: 1.1em;
   line-height: 1.7em;
@@ -81,8 +88,20 @@ p {
   }
 }
 
+.text-shadow {
+  text-shadow: 2px 2px 3px $textShadow;
+  
+}
 
-/* LAUNCH PAGE */
+/* Scroller pages for homepage concept /*
+ * 
+ */
+
+.page_first {background-color:$backgroundOrange}
+
+
+ 
+/* Navbars */
 
 header.navbar {
   background-color:#000;
@@ -96,31 +115,6 @@ text-align:center;
     *display:inline; 
 } 
 
-/* Git Stats */
-
-.gitstats {
-  .intro {
-    
-  }
-  .commit {
-    font-size: 80px;
-    line-height: 80px;
-    font-weight: bold;
-  }
-  .gitdetail {
-    text-align:center;
-
-    p {
-        text-align:center;
-        }
-    small {
-      float:right;
-      padding-right:10px;    
-    }  
-  }
-}
-
-
 .midnav > li > a {
    color: #777777;
     float: none;
@@ -130,13 +124,42 @@ text-align:center;
 }
 
 
+/* Git Stats */
+
+.gitstats {
+  color:$font;
+  .intro {
+    font-family:$headingFont;
+    padding-left:10px;
+  }
+  #commit {
+     font-family:$headingFont;
+    font-size: 80px;
+    line-height: 50px;
+    font-weight:normal;
+ 
+    }
+  blockquote {
+        text-align:center;
+        
+    small {
+      float:right;
+      color:$grayMid;
+    }
+  }
+}
+
+
+
+
 /* FOOTER */
 
 footer {
   margin-top: 45px;
   padding-top: 5px;
-  border-top: 1px solid #eaeaea;
-  color: $grayLight;
+  padding-bottom: 10px;
+  border-top: none;
+  color: $white;
   a {
     color: #555;
     &:hover {

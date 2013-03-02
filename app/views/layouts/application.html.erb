@@ -1,14 +1,19 @@
 	<!DOCTYPE html>
 	<html>
+		
 	<head>
 	  <title><%= full_title(yield(:title)) %></title>
 	  <%= stylesheet_link_tag    "application", media:" all" %>
 	  <%= javascript_include_tag "application" %>
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="mmofish" content="">
+      <meta name="Mizpah" content="">
 	  <%= csrf_meta_tags %>
 	  <%= render 'layouts/shim' %>
 	</head>
 	  <body>
 	  	<%= render 'layouts/header' %>
+	  	<div class="page_first">
 		<div class="container">
 	  		<div class="row-fluid">
                 <div class="span8 offset2">
@@ -29,10 +34,10 @@
  
                 </div>
                 </div>
-            </div>
-          </div>
-	     
-	      <%= render 'layouts/footer'%>
+           </div> <!-- close container -->
+           <%= render 'layouts/footer'%>
+      </div>  <!-- close page_first -->
+      
 
 
 	  </body>
