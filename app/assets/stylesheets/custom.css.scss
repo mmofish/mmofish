@@ -11,7 +11,7 @@ $myOrange: #f89406;
 $orange: $myOrange;
 
 @import "bootstrap";
-@import url(http://fonts.googleapis.com/css?family=Nova+Square); /*Test Font*/
+@import url(http://fonts.googleapis.com/css?family=Orbitron:400,500,700,900); /* Title Font */
 
 /* New scss $vars
  * --------------
@@ -23,8 +23,8 @@ $grayMid:#666;
 $backgroundOrange:#f78b00;
 $backgroundGrey:#eeeeee;
 $textShadow:rgba(0,0,0,0.25); /*black with 25% opacity!*/
-$headingFont:'Nova Square', cursive;
-$font:#fef200;
+$headingFont:'Orbitron', sans-serif;
+$font:#ffc000;
 
 /* UNIVERSAL */
 
@@ -89,7 +89,7 @@ p {
 }
 
 .text-shadow {
-  text-shadow: 2px 2px 3px $textShadow;
+  text-shadow: 0px 1px 1px $textShadow;
   
 }
 
@@ -107,6 +107,12 @@ header.navbar {
   background-color:#000;
 }
 
+.midnav {
+  background-image: image-url("separator-h.png");
+  background-repeat:no-repeat;
+  background-position:center bottom;
+  
+}
 .midnav > li { 
 text-align:center; 
   display:inline-block; 
@@ -130,17 +136,19 @@ text-align:center;
   color:$font;
   .intro {
     font-family:$headingFont;
-    padding-left:10px;
+    font-size:20px;
+    text-transform:lowercase;
   }
   #commit {
-     font-family:$headingFont;
-    font-size: 80px;
+    font-family:$headingFont;
+    font-size:   50px;
     line-height: 50px;
-    font-weight:normal;
- 
-    }
+    font-weight: 500;
+     }
   blockquote {
         text-align:center;
+        border-right:none;
+        padding-right:5px;
         
     small {
       float:right;
@@ -149,8 +157,14 @@ text-align:center;
   }
 }
 
-
-
+/* Social Icons */
+.social_icons {
+  background-image: image-url("separator-v.png");
+  background-repeat:no-repeat;
+  background-position:right center;
+  padding-right:10px;
+  min-height:170px;
+}
 
 /* FOOTER */
 
