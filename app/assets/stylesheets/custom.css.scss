@@ -9,9 +9,13 @@
 
 $myOrange: #f89406;
 $orange: $myOrange;
+$myBaseFont: 'Dosis', sans-serif;
+$baseFontFamily: $myBaseFont;
+
 
 @import "bootstrap";
-@import url(http://fonts.googleapis.com/css?family=Orbitron:400,500,700,900); /* Title Font */
+@import url(http://fonts.googleapis.com/css?family=Dosis:400,600,300); /* Body Font */
+@import url(http://fonts.googleapis.com/css?family=Geo); /* Title font */
 
 /* New scss $vars
  * --------------
@@ -23,7 +27,8 @@ $grayMid:#666;
 $backgroundOrange:#f78b00;
 $backgroundGrey:#eeeeee;
 $textShadow:rgba(0,0,0,0.25); /*black with 25% opacity!*/
-$headingFont:'Orbitron', sans-serif;
+$headingFont:'Geo', sans-serif;
+$bodyFont:'Dosis', sans-serif;
 $font:#ffc000;
 
 /* UNIVERSAL */
@@ -136,21 +141,26 @@ text-align:center;
   color:$font;
   .intro {
     font-family:$headingFont;
-    font-size:20px;
+    font-size:26px;
     text-transform:lowercase;
+    padding-left:5px;
   }
   #commit {
-    font-family:$headingFont;
-    font-size:   50px;
-    line-height: 50px;
-    font-weight: 500;
+    font-family:$bodyFont;
+    font-size:   110px;
+    line-height: 130px;
+    font-weight: 600;
      }
   blockquote {
-        text-align:center;
         border-right:none;
         padding-right:5px;
-        
-    small {
+        border-left:none;
+        padding-left:5px;
+        padding-top:10px;
+        P {
+          font-weight:400;
+        }
+        small {
       float:right;
       color:$grayMid;
     }
