@@ -1,4 +1,39 @@
-	<div class="center hero-unit">
-		<h1>mmofish</h1>
-		<p>Temp home page</p>
+<!-- Grid Structure for the homepage -->
+
+<!-- The Hero-Unit -->
+	<div class="row">
+  		<div class="span10 offset1">
+  			<%= render 'layouts/home_hero' %>  
+  			  		</div>
 	</div>
+
+<!-- The MiddleNav-->
+	<div class="row">
+  		<div class="span12">
+  			<%= render 'layouts/midnav'%>
+  		</div>
+	</div>
+<!-- Just Below MiddleNav-->
+	<div class="row-nogutter">
+				<div class="span5 offset1">
+			<div class="row-nogutter">	
+				<div class="span4">
+					 <%= render 'layouts/email_signup'%>
+				</div>
+				<div class="span1">
+				 <%= render 'layouts/social_icons'%>
+				</div>
+			</div>
+		</div>
+		
+		<div class="span5">
+			 <%= render 'layouts/git/git'%>
+		</div>	
+	</div>
+
+
+
+			
+				
+
+

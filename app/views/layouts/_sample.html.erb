@@ -1,0 +1,58 @@
+<!-- Grid Structure for the homepage -->
+<!-- The Hero-Unit -->
+<div class="row-fluid">
+  <div class="span10 offset1">
+  	<div class="center hero-unit">
+		<h1>mmofish</h1>
+		<p>Temp home page</p>
+	</div>
+  </div>
+</div>
+<!-- The MiddleNav-->
+<div class="row-fluid">
+  <div class="span12">
+  	<%= render 'layouts/midnav'%>
+  </div>
+</div>
+<!-- Just Below MiddleNav-->
+<div class="row-fluid">
+<!-- top-left -->
+  <div class="span6">
+  	<!-- email signup -->
+  	<div class="span10"></div>
+  	<!-- social media links -->
+  	<div class="span2">
+  		<%= render 'layouts/social_icons'%>
+  	</div>
+  </div>	
+
+<!-- top-right -->  
+  <div class="span6">
+  	<!-- git row one -->
+  	<div class="row-fluid">
+  		<!-- git-intro -->
+  		<div class="span12">
+  			<span>latest commit id:</span>
+  		</div>
+  	</div>
+  	<!-- git row 2 -->
+  	<div class="row-fluid">
+  		<!-- git-number -->
+  		<div class="span10">
+  			<%= render 'layouts/git/commit_number'%>
+  		</div>
+  		<!-- git-hash -->
+  		<div class="span2">
+  			<%= render 'layouts/git/hash_details'%>
+  		</div>
+  	</div>
+  	<!-- git row 3 -->	
+    <div class="row-fluid">
+    	<!-- git-commit-message -->
+    	<div class="span12">
+    		<%= render 'layouts/git/commit_message'%>	
+		</div>
+    	</div>
+    </div>	  
+ </div>
+</div>
