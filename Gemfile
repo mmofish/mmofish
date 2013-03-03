@@ -26,7 +26,7 @@ gem 'thin'
 # Gems used only for development and testing,
 # and not required in production environments by default.
 group :development, :test do
-  #gem 'sqlite3', '~>1.3'
+  gem 'sqlite3', '~>1.3'
   gem 'rspec-rails', '~>2.11'
   gem 'guard-rspec', '~>1.2'
   gem 'guard-spork', '~>1.2'  
