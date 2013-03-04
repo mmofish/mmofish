@@ -1,0 +1,73 @@
+	<% provide(:title, 'Testing Area')%>
+
+<div id="home_hero" class="hero-unit visible-desktop">
+	<div class="container">
+	  <h1>Testing Area</h1>
+	  <p>This series of pages, used to test functions, ideas and any other general funny business thats needed!</p>
+	</div> 
+</div>
+	
+	
+	<div id="home_hero" class="hero-unit visible-desktop">
+	<div class="container">
+	 <div class="big_fish"><%= link_to image_tag("logo-big.png", alt: "mmofish"), 'http://www.mmofish.com'%></div>
+	</div> 
+</div>
+	
+<p>
+					<a id="testSlide3" href="#">gotoSlide3</a>
+				</p>	
+					
+<div class="container" >
+	<div id="da-slider" class="da-slider">
+				<div class="da-slide">
+					<h2>mmofish</h2>
+					<p>When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the Line Lane.</p>
+					<a href="#" class="da-link">Read more</a>
+					<div class="da-img"><%= image_tag("slider/1.png", alt: "Alt Tag") %></div>
+				</div>
+				<div class="da-slide">
+					<h2>About</h2>
+					<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+					<a href="#" class="da-link">Read more</a>
+					<div class="da-img"><%= image_tag("slider/2.png", alt: "Alt Tag") %></div>
+				</div>
+				<div class="da-slide">
+					<h2>Contact Us</h2>
+					<p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
+					<a href="#" class="da-link">Read more</a>
+					<div class="da-img"><%= image_tag("slider/3.png", alt: "Alt Tag") %></div>
+				</div>
+				<div class="da-slide">
+					<h2>Foo.</h2>
+					<p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
+					<a href="#" class="da-link">Read more</a>
+					<div class="da-img"><%= image_tag("slider/4.png", alt: "Alt Tag") %></div>
+				</div>
+				<nav class="da-arrows">
+					<span class="da-arrows-prev"></span>
+					<span class="da-arrows-next"></span>
+				</nav>
+			</div>
+			</div>
+
+<script type="text/javascript">
+			$(function() {
+			
+				var $slider	= $('#da-slider');
+				
+				// initialize the slider
+				$slider.cslider();
+				
+				// example how to go to page 3 when clicking on a link
+				$('#testSlide3').on( 'click', function( event ) {
+				
+					$('#da-slider').cslider( 'page', 2 );
+					return false;
+				
+				} );
+			
+			});
+		</script>
+     
+		
