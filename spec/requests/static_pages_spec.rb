@@ -8,13 +8,11 @@ describe "Static pages" do
     
     before { visit root_path }
     
-    it { should have_selector('h1', text: 'mmofish') }
+    
     it { should have_selector('title', text: full_title('')) }
     it { should_not have_selector('title', text: '| Home') }
     
-      before { click_link "mmofish" }
-      
-      it { should have_selector( 'h1', text: 'mmofish') }
+
     
   end
 
@@ -34,6 +32,15 @@ describe "Static pages" do
        
       it { should have_selector('h1', text: 'Contact') }
       it { should have_selector('title', text: full_title('Contact')) }
+     
+  end
+  
+  describe "Testing Area" do
+        
+      before { visit testing_path }
+       
+      it { should have_selector('h1', text: 'Testing Area') }
+      it { should have_selector('title', text: full_title('Testing Area')) }
      
   end
 end
