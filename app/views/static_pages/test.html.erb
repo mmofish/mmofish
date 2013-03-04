@@ -1,73 +1,89 @@
-	<% provide(:title, 'Testing Area')%>
+<% provide(:title, 'Testing Area')%>
 
-<div id="home_hero" class="hero-unit visible-desktop">
-	<div class="container">
-	  <h1>Testing Area</h1>
-	  <p>This series of pages, used to test functions, ideas and any other general funny business thats needed!</p>
-	</div> 
-</div>
-	
-	
-	<div id="home_hero" class="hero-unit visible-desktop">
-	<div class="container">
-	 <div class="big_fish"><%= link_to image_tag("logo-big.png", alt: "mmofish"), 'http://www.mmofish.com'%></div>
-	</div> 
-</div>
-	
-<p>
-					<a id="testSlide3" href="#">gotoSlide3</a>
-				</p>	
-					
-<div class="container" >
-	<div id="da-slider" class="da-slider">
-				<div class="da-slide">
-					<h2>mmofish</h2>
-					<p>When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the Line Lane.</p>
-					<a href="#" class="da-link">Read more</a>
-					<div class="da-img"><%= image_tag("slider/1.png", alt: "Alt Tag") %></div>
-				</div>
-				<div class="da-slide">
-					<h2>About</h2>
-					<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-					<a href="#" class="da-link">Read more</a>
-					<div class="da-img"><%= image_tag("slider/2.png", alt: "Alt Tag") %></div>
-				</div>
-				<div class="da-slide">
-					<h2>Contact Us</h2>
-					<p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
-					<a href="#" class="da-link">Read more</a>
-					<div class="da-img"><%= image_tag("slider/3.png", alt: "Alt Tag") %></div>
-				</div>
-				<div class="da-slide">
-					<h2>Foo.</h2>
-					<p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
-					<a href="#" class="da-link">Read more</a>
-					<div class="da-img"><%= image_tag("slider/4.png", alt: "Alt Tag") %></div>
-				</div>
-				<nav class="da-arrows">
-					<span class="da-arrows-prev"></span>
-					<span class="da-arrows-next"></span>
-				</nav>
-			</div>
-			</div>
 
-<script type="text/javascript">
-			$(function() {
-			
-				var $slider	= $('#da-slider');
-				
-				// initialize the slider
-				$slider.cslider();
-				
-				// example how to go to page 3 when clicking on a link
-				$('#testSlide3').on( 'click', function( event ) {
-				
-					$('#da-slider').cslider( 'page', 2 );
-					return false;
-				
-				} );
-			
-			});
-		</script>
-     
+<div class="container test topmargin2">
+<div class="row" style="margin-top:35px;">
+	  	<div class="span12">
+	  		<div class="center hero-unit">
+	  		
+	  		<h1>Testing Area</h1>
+	
+	  		<p class="lead">This series of pages, used to test functions, ideas and any other general funny business thats needed!</p>
+		</div>
+		</div>
+	</div>
+	  
+	<div class="row" style="margin-top:35px;">
+		<div class="span12">	
+			<h2 class="pull-left">Testing Tabs / Pilled Content</h2>
+		</div>
+	</div>
+
+	<div class="row" style="margin-top:35px;">
+		<div class="span8 offset2">	
+			<p>These tabs are made using the html data channel as per bootstrap defaults!</p>
+			<p>The JS is triggered with <code>$(function () {
+		    $('#home-panes a:first').tab('show');
+		 })</code> or can be directly manipulated.</p>
 		
+			<p>The example below uses <code>fade in</code> as two classes to trigger css transitions, 
+				and the class <code>active</code> is added to the first element to be loaded.</p>
+				
+				<p>We still need to remove the white box from the menu thats aquired with the new structure and classes!</p>
+					
+	</div></div>
+		
+	<div class="row">
+		
+		<div id="home_hero" class="hero-unit visible-desktop">
+			<div class="container">
+				<div class="tab-content">
+	    			<div class="tab-pane fade in active" id="1">
+				
+			 			<div class="big_fish">
+			 				<%= link_to image_tag("logo-big.png", alt: "mmofish"), 'http://www.mmofish.com'%>
+			 			</div>
+	
+					</div>
+			    	<div class="tab-pane fade in" id="2">
+			    		<h2>mmofish</h2>
+			    		<p style="padding:20px; color:white;" class="text-shadow">
+			    			Gaming communities need great websites and social tools to help them thrive.
+			    			<br />
+			    			No, I am not a web developer.
+			    			No I don't want to stick a template on it and call it unique.
+			    			No I don't want to look at any more ads.
+			    			Why cant it just work - and connect to my games ?
+			    			<br />
+			    			Grow your community. Thrive. Free.</p>
+			    	</div>
+			    	<div class="tab-pane fade in" id="3">
+			    		<p>lorum tab 3 ipsum...</p>
+			    	</div>
+			    	<div class="tab-pane fade in" id="4">
+			    		<p>lorum tab 4 ipsum...</p>
+			    	</div>
+		    	</div>
+		    
+		    </div> 
+		</div>
+	</div>	
+		
+	</div class="row">
+	
+		
+			<nav class="midnav text-shadow nav center">
+				<ul class="nav midnav" id="home-panes">
+  					<li><a href="#1" data-toggle="tab">Home</a></li>
+  					<li><a href="#2" data-toggle="tab">About</a></li>
+  					<li><a href="#3" data-toggle="tab">Contact</a></li>
+  					<li><a href="#4" data-toggle="tab">Sign in</a></li>
+  				</ul>
+			</nav>
+		</div>
+	</div>
+	</div>   <script>
+		    	$(function () {
+		    $('#home-panes a:first').tab('show');
+		  })
+		    </script>
