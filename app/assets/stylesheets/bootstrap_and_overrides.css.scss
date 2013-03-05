@@ -9,8 +9,9 @@
  * 
  *  */
 
+
 .content {
-background-color: #eee;
+background-color: #eee; // Default color for the app background
 padding: 20px;
 margin: 0 -20px; /* negative indent the amount of the padding to maintain the grid system */
 -webkit-border-radius: 0 0 6px 6px;
@@ -20,3 +21,8 @@ border-radius: 0 0 6px 6px;
 -moz-box-shadow: 0 1px 2px rgba(0,0,0,.15);
 box-shadow: 0 1px 2px rgba(0,0,0,.15);
 }
+
+
+.static_pages.home .content {
+    background-color: #F78B00; //color reset for logged out out home page.
+  }
