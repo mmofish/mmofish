@@ -1,13 +1,11 @@
 <header class="navbar navbar-fixed-top navbar-inverse">
 	<div class="navbar_inner">
 		<div class="container">
-		<%= link_to "mmofish", root_path, id: "logo" %>
+		<%#= link_to "mmofish", root_path, id: "logo" %>
+		<%= link_to "mmofish", root_path, :class => 'brand', :id => 'logo' %>
 			<nav>
-				<ul class="nav pull-right">
-					<li><%= link_to "Home",       root_path %></li>
-					<li><%= link_to "About us",  about_path %></li>
-					<li><%= link_to "Sign in",  signup_path %></li>
-				<ul>
+				<%= render 'layouts/navigation' %>	
+				<%#= link_to "Sign in",  signup_path %></li> %>**Removed - Do I need this ?
 			</nav>
 		</div>
 	</div>

@@ -6,24 +6,30 @@
 	  <%= stylesheet_link_tag    "application", media:" all" %>
 	  <%= javascript_include_tag "application" %>
 	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="mmofish" content="">
-      <meta name="Mizpah" content="">
+      <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "mmofish" %>
 	  <%= csrf_meta_tags %>
 	  <%= render 'layouts/shim' %>
 	</head>
-	  <body>
+	  <body class="<%= controller_name %> <%= action_name %>">
 	  	<div id="wrap">
 			<div class="container">
 			<!-- header -->
 			
 			<%= render 'layouts/header' %>
 			
-			<!-- content -->
-			<%= yield %>
-					
-			</div>
-				<div id="push"></div>
-			</div>
-           	<%= render 'layouts/footer' %>
+			<div id="main" role="main">
+				<div class="container">
+					<div class="content">
+						<div class="row">
+							<div class="span12">
+								<%= render 'layouts/messages' %>
+								<!-- content -->
+								<%= yield %>
+							</div>
+							<div id="push"></div>
+						</div>
+           				<%= render 'layouts/footer' %>
+	  				</div> <!--! end of .container -->
+    			</div>	<!--! end of #main -->
 	  </body>
 	</html>
