@@ -23,9 +23,9 @@ gem 'jquery-rails', '~>2.0'
 gem 'thin'
 gem 'devise', '>=2.1.2'
 gem 'cancan', '>=1.6.8'
-gem 'rolify', '>=3.2.0'
+gem 'rolify', '>=3.2.0' #Used to create roles
 gem 'simple_form', '>= 2.0.4'
-gem 'figaro', '>=0.5.0'
+gem 'figaro', '>=0.5.0' #Seperates personal details into ENV details prior to distribution
 
  
 

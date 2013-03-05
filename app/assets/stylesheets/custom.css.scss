@@ -13,6 +13,7 @@ $baseFontFamily: $myBaseFont;
 
 
 @import "bootstrap";
+body {padding-top:60px} //make s space for the twitter navbar!
 @import "bootstrap-responsive";
 @import url(http://fonts.googleapis.com/css?family=Dosis:400,600,300); /* Body Font */
 @import url(http://fonts.googleapis.com/css?family=Geo); /* Title font */
@@ -22,7 +23,6 @@ $baseFontFamily: $myBaseFont;
  * Will apply to all references in this file
  *
  */
-
 $grayMid:#666;
 $backgroundOrange:#f78b00;
 $backgroundGrey:#eeeeee;

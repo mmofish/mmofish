@@ -1,11 +1,18 @@
 Mmofish::Application.routes.draw do
 
+  #get "home/index"
+  authenticated :user do
+  root :to => 'home#index'
+  end
+  root :to => 'static_pages#home'
+
   devise_for :users
 
-  root :to => 'static_pages#home'
+  
 
   match '/signup', to: 'users#new'
   
+  match '/app', to: 'home#index'
   match '/about', to: 'static_pages#about'
   match '/contact', to: 'static_pages#contact'
   match '/testing', to: 'static_pages#test'
