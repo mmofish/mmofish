@@ -1,22 +1,30 @@
 Mmofish::Application.routes.draw do
 
+
   #get "home/index"
   authenticated :user do
-  root :to => 'home#index'
+    root :to => "static_pages#home"
   end
-  root :to => 'static_pages#home'
-
+  
+  root :to => "static_pages#home"
   devise_for :users
-
+  resources :users
   
+  namespace :admin do
+    get '', to: 'dashboard#index', as: '/'
+  end
 
-  match '/signup', to: 'users#new'
+
+# Set default index actions for each controller
+  match '/user', to: 'users#index'
+ # match '/admin', to: 'users#index' #This mirrors the route above ?
   
-  match '/app', to: 'home#index'
+  match '/static_pages', to: 'static_pages#home'
+  
   match '/about', to: 'static_pages#about'
   match '/contact', to: 'static_pages#contact'
   match '/testing', to: 'static_pages#test'
-      
+end
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -73,4 +81,3 @@ Mmofish::Application.routes.draw do
   # This is a legacy wild controller route that's not recommended for RESTful applications.
   # Note: This route will make all actions in every controller accessible via GET requests.
   # match ':controller(/:action(/:id))(.:format)'
-end

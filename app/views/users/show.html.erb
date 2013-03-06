@@ -1,0 +1,6 @@
+<% provide(:title, 'User Profile') %>
+<div class="center hero-unit">
+	<h3>User</h3>
+		<p>Username: <%= @user.username %></p>
+		<p>Email: <%= @user.email if @user.email %></p>
+</div>
