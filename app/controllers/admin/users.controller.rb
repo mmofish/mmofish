@@ -1,9 +1,20 @@
-#controllers/admin/dashboard_controller.rb
+#controllers/admin/users_controller.rb
 
 class Admin::DashboardController < Admin::BaseController
-layout 'dashboard'
+
   def index
     authorize! :index, @user, :message => 'Not authorized as an administrator.'
     @users = User.all
   end
+  
+  def show
+    @user = User.find(params[:id])
+  end
+  
+  def update
+  end
+  
+  def destroy
+  end
+  
 end

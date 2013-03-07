@@ -1,0 +1,15 @@
+	<!DOCTYPE html>
+	<html>
+		<head>
+			<title><%= full_title(yield(:title)) %></title>
+			<%= stylesheet_link_tag    "application", media:" all" %>
+			<%= javascript_include_tag "application" %>
+			<meta name="viewport" content="width=device-width, initial-scale=1.0">
+			<meta name="description" content="<%= content_for?(:description) ? yield(:description) : "mmofish" %>">
+			<%= csrf_meta_tags %>
+			<%= render 'layouts/shim' %>
+		</head>
+		<body class="<%= controller_name %> <%= action_name %>">
+			<p>FOO</p>
+		</body>
+	</html>

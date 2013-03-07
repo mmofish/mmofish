@@ -1,0 +1,35 @@
+<!--! layouts/dashboard.html.erb -->
+	<!DOCTYPE html>
+	<html>
+		<head>
+			<title><%= full_title(yield(:title)) %></title>
+			<%= stylesheet_link_tag    "application", media:" all" %>
+			<%= javascript_include_tag "application" %>
+			<meta name="viewport" content="width=device-width, initial-scale=1.0">
+			<meta name="description" content="<%= content_for?(:description) ? yield(:description) : "mmofish" %>">
+			<%= csrf_meta_tags %>
+			<%= render 'layouts/shim' %>
+		</head>
+		<body class="<%= controller_name %> <%= action_name %>">
+			<!-- header -->
+			<%= render 'header' %>
+
+				<div class="container">
+					<div class="content">
+							<div class="row">
+								<div class="span12">
+									<%= render 'messages' %>
+									<!-- content -->
+									This is dashboard.html.erb
+									<!--! #this is the menu in the DASHBOARD -->
+									<%= render 'bridge' %>
+								</div>
+								</div>
+								<%= yield %>
+										
+						</div>
+					</div><!--! end of .content -->
+				</div> <!--! end of .container -->
+				<%= render 'footer' %>
+		</body>
+	</html>
