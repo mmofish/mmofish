@@ -12,11 +12,12 @@ Mmofish::Application.routes.draw do
   
   namespace :admin do
     get '', to: 'dashboard#index', as: '/'
+ resources :users
   end
 
 
 # Set default index actions for each controller
-  match '/user', to: 'users#index'
+  #match '/user', to: 'users#index'
  # match '/admin', to: 'users#index' #This mirrors the route above ?
   
   match '/static_pages', to: 'static_pages#home'
