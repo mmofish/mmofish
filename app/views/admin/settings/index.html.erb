@@ -1,2 +1,20 @@
-<h1>Admin::Settings#index</h1>
-<p>Find me in app/views/admin/settings/index.html.erb</p>
+<!--! views/admin/settings/index.html.erb -->
+<div class="row">
+
+		<div class="span2">
+		<div class="hero-unit" style="padding:5px;background-color:#FFCCCC">
+				<p>This is a span2 containing a render 'sidebar'</p>
+				<%= render 'sidebar' %>
+		</div>
+	
+		</div>
+		
+		<div class="span10">
+			<div class="hero-unit">
+				<p>This is the settings index action.</p>
+				<p>Find me in app/views/admin/settings/index.html.erb</p>
+				<p>It contains a yield to be triggered by the nav on the left.</p>
+				<%= yield %>
+			</div>
+		</div>
+</div>

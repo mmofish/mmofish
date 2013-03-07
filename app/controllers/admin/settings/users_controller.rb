@@ -1,7 +1,6 @@
-#controllers/admin/users_controller.rb
+#controllers/admin/settings/users_controller.rb
 
-class Admin::DashboardController < Admin::BaseController
-
+class Admin::Settings::UsersController < Admin::SettingsController
   def index
     authorize! :index, @user, :message => 'Not authorized as an administrator.'
     @users = User.all
