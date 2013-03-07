@@ -1,6 +1,8 @@
 Mmofish::Application.routes.draw do
 
 
+ 
+
   #get "home/index"
   authenticated :user do
     root :to => "static_pages#home"
@@ -12,8 +14,9 @@ Mmofish::Application.routes.draw do
   
   namespace :admin do
     get '', to: 'dashboard#index', as: '/'
+    get '/settings', to: 'settings#index', as: '/settings'
     resources :users
-  end
+ end
 
 
 # Set default index actions for each controller
