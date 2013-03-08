@@ -14,6 +14,5 @@
 //= require jquery_ujs
 // Loads all Bootstrap javascripts
 //= require bootstrap
-//= require slider/home_slider.js
+//= require jquery.readyselector.js
 //= require_tree .
-
