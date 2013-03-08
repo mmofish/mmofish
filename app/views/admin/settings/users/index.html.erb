@@ -1,15 +1,12 @@
-<!--! app/views/admin/settings.index.html.erb 
+<!--! app/views/admin/settings.index.html.erb -->
 <% provide(:title, 'User Managment') %>
-<%# content_for :settings do %>
+
 	<ul class="users">
-		<p>FooFoo</p>
-		<% @users.each do |user| %>
+			<% @users.each do |user| %>
 			<li><%= link_to user.username, user %> signed up <%= user.created_at.to_date %></li>
 			
-		<%# end %>
+		<% end %>
 	</ul>
-<% end %> -->
-
-<% content_for :panel1 do %>
-<p>test output</p>
 <% end %>
+
+

@@ -25,7 +25,6 @@ gem 'devise', '>=2.1.2'
 gem 'cancan', '>=1.6.8'
 gem 'rolify', '>=3.2.0' #Used to create roles
 gem 'simple_form', '>= 2.0.4'
-gem 'figaro', '>=0.5.0' #Seperates personal details into ENV details prior to distribution
 
  
 
@@ -40,6 +39,8 @@ group :development, :test do
   gem 'quiet_assets', '>=1.0.1'
   gem 'better_errors', '>=0.2.0'
   gem 'binding_of_caller', '>=0.6.8'
+  gem 'figaro', '>=0.5.0' #Seperates personal details into ENV details prior to distribution
+
 end
 
 
