@@ -14,7 +14,7 @@ gem 'rails', '~>3.2'
 
 # Example 'Pessamistic Constraint': Thus ~>2.1 will allow all version to update between 2.1.0 & 2.9.9, but will not
 # allow 3.0.0 to load. 
-
+gem 'thin'
 gem 'bootstrap-sass', '~>2.3'
 gem 'bcrypt-ruby', '~>3.0'
 gem 'faker', '~>1.0'
@@ -32,7 +32,7 @@ gem 'simple_form', '>= 2.0.4'
 # Gems used only for development and testing,
 # and not required in production environments by default.
 group :development, :test do
-  gem 'thin'
+
   gem 'sqlite3'
   gem 'rspec-rails', '~>2.11'
   gem 'guard-rspec', '~>1.2'
