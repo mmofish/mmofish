@@ -60,8 +60,9 @@ SimpleNavigation::Configuration.run do |navigation|
     end
     primary.item :key_2, 'Settings', admin_settings_root_path do |sub_nav|
       
-      sub_nav.dom_class = 'nav inline'
-      sub_nav.item :key_1_1, 'Manage Users' do |sub_nav|
+      
+      sub_nav.item :key_1_1, 'Manage Users', nil do |sub_nav|
+        sub_nav.dom_class = 'nav inline'
         sub_nav.item :key_1_1, '2_1_1'
         sub_nav.item :key_1_2, '2_1_2'
         sub_nav.item :key_1_3, '2_1_3'
@@ -75,9 +76,9 @@ SimpleNavigation::Configuration.run do |navigation|
       sub_nav.item :key_1_5, '2_5'      
     end
     
-    primary.item :key_3, 'Content', 'wibble'
-    primary.item :key_4, 'Members', 'quaax'
-    primary.item :key_5, 'Configuration', 'gulp'
+    primary.item :key_3, 'Content', nil
+    primary.item :key_4, 'Members', nil
+    primary.item :key_5, 'Configuration', nil
 
     # Add an item which has a sub navigation (same params, but with block)
     #primary.item :key_2, 'Dashboard', url, options do |sub_nav|
