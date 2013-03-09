@@ -2,7 +2,7 @@
 
 class Admin::BaseController < ApplicationController
   
-layout 'dashboard'
+layout 'admin'
   
 before_filter :authenticate_user!
 

@@ -1,1 +1,11 @@
 <p>This is the admin/settings/users/index.html.erb</p>
+
+<!--! app/views/admin/settings.index.html.erb -->
+<% provide(:title, 'User Managment') %>
+
+	<ul class="users">
+			<% @users.each do |user| %>
+			<li><%= link_to user.username, user %> signed up <%= user.created_at.to_date %></li>
+			
+			<% end %>
+	</ul>

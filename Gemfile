@@ -20,10 +20,11 @@ gem 'bcrypt-ruby', '~>3.0'
 gem 'faker', '~>1.0'
 gem 'kaminari'
 gem 'jquery-rails', '~>2.0'
-gem 'thin'
 gem 'devise', '>=2.1.2'
 gem 'cancan', '>=1.6.8'
 gem 'rolify', '>=3.2.0' #Used to create roles
+gem "simple-navigation"
+gem 'simple-navigation-bootstrap'
 gem 'simple_form', '>= 2.0.4'
 
  
@@ -31,7 +32,8 @@ gem 'simple_form', '>= 2.0.4'
 # Gems used only for development and testing,
 # and not required in production environments by default.
 group :development, :test do
-  gem 'sqlite3', '~>1.3'
+  gem 'thin'
+  gem 'sqlite3'
   gem 'rspec-rails', '~>2.11'
   gem 'guard-rspec', '~>1.2'
   gem 'guard-spork', '~>1.2'  

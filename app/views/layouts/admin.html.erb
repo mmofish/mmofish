@@ -1,3 +1,4 @@
+<!--! layouts/admin.html.erb -->
 	<!DOCTYPE html>
 	<html>
 		<head>
@@ -10,6 +11,52 @@
 			<%= render 'layouts/shim' %>
 		</head>
 		<body class="<%= controller_name %> <%= action_name %>">
-			<p>FOO</p>
+			<!-- header -->
+			<%= render 'header' %>
+
+				<div class="container">
+					<div class="content">
+						
+							<!--! This row is for system messages -->
+							<div class="row">
+								<div class="span12">
+									<%= render 'messages' %>									
+								</div>
+							</div>
+							
+							<!--! This row is for :adminroot menu, -->
+			
+							
+							<div class="row">
+								<div class="span2">
+									<%= render_navigation( :context => :admin, :level => 1, :renderer => :bootstrap) %>
+								</div>
+								<!--! and :admintop-->
+								<div class="span10">
+									<%= render_navigation( :context => :admin, :level => 2) %>
+								</div>
+							</div>
+							
+							
+							<!--! This row is for the yield of menu items! -->
+							<div class="row">
+								<div class="span2">
+									<%= render_navigation( :context => :admin, :level => 3) %>									
+								</div>
+							</div>
+					
+							<div class="row">
+								<div class="span10">
+									<%= yield %>	
+								</div>
+							</div>
+							
+							
+							
+							</div>
+					
+					</div><!--! end of .content -->
+				</div> <!--! end of .container -->
+				<%= render 'footer' %>
 		</body>
 	</html>
