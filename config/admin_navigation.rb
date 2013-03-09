@@ -61,7 +61,7 @@ SimpleNavigation::Configuration.run do |navigation|
     primary.item :key_2, 'Settings', admin_settings_root_path do |sub_nav|
       
       sub_nav.dom_class = 'nav inline'
-      sub_nav.item :key_1_1, '2_1 - Manage Users', admin_settings_users_path do |sub_nav|
+      sub_nav.item :key_1_1, 'Manage Users', admin_settings_users_path do |sub_nav|
         sub_nav.item :key_1_1, '2_1_1'
         sub_nav.item :key_1_2, '2_1_2'
         sub_nav.item :key_1_3, '2_1_3'
